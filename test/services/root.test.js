@@ -1,5 +1,5 @@
-import { test } from 'tap';
-import { build } from '../helper';
+import { test } from 'tap'
+import { build } from '../helper'
 
 test('default root route', (t) => {
   t.plan(2)

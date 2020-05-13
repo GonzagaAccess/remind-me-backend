@@ -1,8 +1,7 @@
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'
+import Fastify from 'fastify'
+import appModule from './app.js'
 dotenv.config()
-import Fastify from 'fastify';
-import appModule from './app.js';
-
 
 // Instantiate Fastify with some config
 const app = Fastify({

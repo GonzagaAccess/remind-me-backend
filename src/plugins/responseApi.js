@@ -1,5 +1,5 @@
-import fp from 'fastify-plugin';
-import generateResponse from '../utils/generatorResponse.js';
+import fp from 'fastify-plugin'
+import generateResponse from '../utils/generatorResponse.js'
 
 // the use of fastify-plugin is required to be able
 // to export the decorators to the outer scope
@@ -25,4 +25,4 @@ const plugin = fp(function (fastify, opts, next) {
   next()
 })
 
-export default plugin;
+export default plugin

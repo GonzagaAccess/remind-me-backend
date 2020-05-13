@@ -1,12 +1,12 @@
-import path from 'path';
-import AutoLoad from 'fastify-autoload';
-import helmet from 'fastify-helmet';
-import swagger from 'fastify-swagger';
-import configSwagger from './config/swagger.js';
+import path from 'path'
+import AutoLoad from 'fastify-autoload'
+import helmet from 'fastify-helmet'
+import swagger from 'fastify-swagger'
+import configSwagger from './config/swagger.js'
 
 const currentDir = path.dirname((new URL(import.meta.url)).pathname)
 
- export default function (fastify, opts, next) {
+export default function (fastify, opts, next) {
   // This loads a set of 12 middlewares for security
   // See more in https://github.com/fastify/fastify-helmet
   fastify.register(

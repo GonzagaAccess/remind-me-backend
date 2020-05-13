@@ -1,7 +1,7 @@
-import { test } from 'tap';
-import { concat as sget } from 'simple-get';
-import Fastify from 'fastify';
-import responseApi from '../../src/plugins/responseApi.js';
+import { test } from 'tap'
+import { concat as sget } from 'simple-get'
+import Fastify from 'fastify'
+import responseApi from '../../src/plugins/responseApi.js'
 
 test('responseApi decorateReply works in encapsulation', t => {
   t.plan(7)
