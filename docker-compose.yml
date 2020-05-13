@@ -6,10 +6,21 @@ services:
     command: npm run start:dev
     working_dir: /usr/local/server/
     restart: on-failure
-    container_name: financial_node
+    container_name: remember-me
     environment:
       PORT: 3000
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: postgres
     volumes:
       - './:/usr/local/server/'
     ports:
       - '8000:3000'
+  db:
+    image: postgres:11.2
+    container_name: db
+    environment:
+      POSTGRES_DB: ms
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
