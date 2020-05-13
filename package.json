@@ -10,7 +10,7 @@
     "unit": "tap test/**/*.test.js",
     "test": "npm run lint && npm run unit",
     "start": "node -r esm src/server.js",
-    "dev": "nodemon ./src/server.js",
+    "start:dev": "nodemon -r esm src/server.js",
     "lint": "eslint . --cache --ignore-pattern .gitignore",
     "lint-fix": "eslint . --cache --fix --ignore-pattern .gitignore"
   },
