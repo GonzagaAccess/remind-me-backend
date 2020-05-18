@@ -18,6 +18,8 @@ services:
       - './:/usr/local/server/'
     ports:
       - '8000:3000'
+    depends_on:
+      - db
   db:
     image: postgres:11.2
     container_name: db
