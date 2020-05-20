@@ -1,11 +1,11 @@
 import helmet from 'fastify-helmet'
-import swagger from 'fastify-swagger'
-import configSwagger from './config/swagger.js'
 import postgres from 'fastify-postgres'
-import configPostgres from './config/postgres.js'
-import responseApi from './plugins/responseApi.js'
-import root from './services/root.js'
-import users from './services/users/index.js'
+import swagger from 'fastify-swagger'
+import configPostgres from './application/config/postgres.js'
+import configSwagger from './application/config/swagger.js'
+import responseApi from './application/plugins/responseApi.js'
+import users from './web/users/index.js'
+import root from './web/root.js'
 
 export default function (fastify, _opts, next) {
   fastify.register(helmet, {})

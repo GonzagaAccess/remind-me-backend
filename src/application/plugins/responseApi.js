@@ -1,5 +1,5 @@
 import fp from 'fastify-plugin'
-import generateResponse from '../utils/generatorResponse.js'
+import generateResponse from '../../infra/generatorResponse.js'
 
 // the use of fastify-plugin is required to be able
 // to export the decorators to the outer scope
