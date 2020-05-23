@@ -27,8 +27,8 @@ services:
       POSTGRES_DB: remember_me
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-    volumes:
-      - ./src/config/init.sql:/docker-entrypoint-initdb.d/init.sql
+    # volumes:
+    #   - ./src/config/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - 7575:5432
 

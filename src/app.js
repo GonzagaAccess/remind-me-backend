@@ -1,7 +1,8 @@
 import helmet from 'fastify-helmet'
-import postgres from 'fastify-postgres'
 import swagger from 'fastify-swagger'
-import configPostgres from './application/config/postgres.js'
+
+import knex from './application/plugins/knex.js'
+import configDatabase from './application/config/database.js'
 import configSwagger from './application/config/swagger.js'
 import responseApi from './application/plugins/responseApi.js'
 import users from './web/users/index.js'
@@ -11,7 +12,7 @@ export default function (fastify, _opts, next) {
   fastify.register(helmet, {})
   fastify.register(swagger, configSwagger)
 
-  fastify.register(postgres, configPostgres)
+  fastify.register(knex, configDatabase)
   // Load plugins
   fastify.register(responseApi)
 

@@ -1,8 +1,9 @@
 CREATE DATABASE remember_me;
 
 CREATE TABLE "users" (
-    "id" int   NOT NULL,
+    "id" serial NOT NULL,
     "name" varchar(255)   NOT NULL,
+    "email" varchar(255) NOT NULL UNIQUE,
     "password" varchar(255)   NOT NULL,
     "created_at" timestamp   NOT NULL,
     "updated_at" timestamp   NULL,
@@ -12,7 +13,7 @@ CREATE TABLE "users" (
 );
 
 CREATE TABLE "remembers" (
-    "id" int   NOT NULL,
+    "id" serial NOT NULL,
     "id_sender" int   NOT NULL,
     "id_receiver" int   NOT NULL,
     "audio_path" varchar(255)   NOT NULL,
